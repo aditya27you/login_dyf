@@ -50,7 +50,7 @@ export default function LoginModal({ onClose }) {
             Sign in to get started
           </h2>
 
-          <div className="flex justify-center items-center gap-[24px] mb-[16px]">
+          <div className="flex justify-start items-center gap-[24px] mb-[16px]">
             <label className="flex items-center gap-2 cursor-pointer select-none">
               <input
                 type="radio"
@@ -160,7 +160,7 @@ export default function LoginModal({ onClose }) {
           <div className="w-[1px] h-[40px] bg-gray-200 self-center"></div>
 
           <div className="flex flex-col items-center text-center max-w-[100px] flex-1">
-            <div className="flex w-[40px] h-[40px] p-[8px] items-center justify-center gap-[10px] rounded-[8px] bg-[#FDF4EC] mb-2 flex-shrink-0">
+            <div className="flex p-[8px] w-[40px] h-[40px] items-center justify-center gap-[10px] rounded-[8px] bg-[#FDF4EC] mb-2 flex-shrink-0">
               <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18.1068 5.33887C20.2877 5.56867 22.3248 6.53596 23.8813 8.08079C25.4378 9.62561 26.4204 11.6554 26.6666 13.8345M18.1068 9.6188C19.1591 9.82631 20.1248 10.3454 20.8784 11.1086C21.6321 11.8718 22.139 12.8439 22.3332 13.8987M26.6133 21.3031V24.5131C26.6145 24.8111 26.5535 25.106 26.4341 25.3791C26.3121 25.6521 26.1396 25.8972 25.92 26.0987C25.7004 26.3001 25.4412 26.4535 25.1589 26.549C24.8766 26.6444 24.5775 26.6799 24.2807 26.6531C20.9882 26.2953 17.8255 25.1702 15.0468 23.3682C12.4615 21.7254 10.2696 19.5336 8.62685 16.9483C6.81855 14.1569 5.69321 10.9789 5.342 7.67154C5.31526 7.37565 5.35042 7.07744 5.44525 6.79589C5.54008 6.51434 5.69249 6.25561 5.89279 6.0362C6.09309 5.81678 6.33687 5.64147 6.60864 5.52143C6.8804 5.40139 7.17418 5.33925 7.47127 5.33897H10.6812C11.2005 5.33386 11.7039 5.51774 12.0976 5.85634C12.4913 6.19494 12.7485 6.66516 12.8212 7.17934C12.9567 8.2066 13.2079 9.21523 13.5702 10.186C13.7141 10.569 13.7453 10.9852 13.66 11.3853C13.5746 11.7855 13.3764 12.1527 13.0887 12.4437L11.7298 13.8025C13.253 16.4813 15.471 18.6993 18.1497 20.2225L19.5086 18.8636C19.7995 18.5759 20.1668 18.3776 20.5669 18.2923C20.9671 18.207 21.3833 18.2381 21.7663 18.3821C22.737 18.7443 23.7457 18.9956 24.7729 19.1311C25.2927 19.2044 25.7674 19.4662 26.1067 19.8667C26.446 20.2672 26.6263 20.7784 26.6133 21.3031Z" stroke="#ED923D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
