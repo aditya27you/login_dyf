@@ -18,16 +18,31 @@ export default function LoginModal({ onClose }) {
         </button>
 
         <div className="flex flex-col">
-          <div className="flex items-center justify-center mb-[20px]">
-            <svg className="w-8 h-8 mr-2 flex-shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 6L28 12L16 18L4 12L16 6Z" fill="#0f2a4a" />
-              <path d="M9 14.5V19C9 21.5 12.5 23 16 23C19.5 23 23 21.5 23 19V14.5" fill="#0f2a4a" />
-              <circle cx="16" cy="3" r="2" fill="#f97316" />
-              <path d="M5 14C5 21 11 26 18 26C23 26 27 23 28 19" stroke="#2563eb" strokeWidth="2.5" strokeLinecap="round" />
+          <div className="flex items-center justify-center mb-[20px] select-none">
+            <svg className="w-10 h-10 mr-2 flex-shrink-0" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17 13.5C10 16.5 8 25 12.5 31.5C15 35 20 35.5 23 33C17.5 34 13.5 31 12.5 25.5C11.5 19.5 14 14.5 17 13.5Z"
+                fill="#e28626"
+              />
+              <path
+                d="M20 20C17.5 23 15.5 28.5 16 32.5C16.2 34 17.5 34.5 18.5 34.5C21 34.5 22.5 28.5 23.5 24.5C24 22.5 23 20.5 20 20Z"
+                fill="#0c3d59"
+              />
+              <circle cx="20.5" cy="15.5" r="3.5" fill="#0c3d59" />
+              <path d="M20.5 9.5L25 12L20.5 14.5L16 12L20.5 9.5Z" fill="#0c3d59" />
+              <path d="M17.5 12.8V15.5" stroke="#0c3d59" strokeWidth="1" />
+              <path
+                d="M16 32C19.5 31 23.5 25 25.5 18.5C26 16.5 26.5 13.5 26.5 13.5C26.5 13.5 25.2 16.5 23.5 20.5C21.5 25 18.5 29.5 16 32Z"
+                fill="#0c3d59"
+              />
+              <path
+                d="M28 10C28 10.8 28.7 11.5 29.5 11.5C28.7 11.5 28 12.2 28 13C28 12.2 27.3 11.5 26.5 11.5C27.3 11.5 28 10.8 28 10Z"
+                fill="#e28626"
+              />
             </svg>
-            <span className="text-[24px] font-bold tracking-tight">
-              <span className="text-[#0f2a4a]">Degree</span>
-              <span className="text-[#2563eb]">FYD</span>
+            <span className="text-[26px] tracking-tight font-sans text-[#0c3d59]">
+              <span className="font-normal">Degree</span>
+              <span className="font-bold">FYD</span>
             </span>
           </div>
 
@@ -47,10 +62,10 @@ export default function LoginModal({ onClose }) {
                 }}
                 className="sr-only"
               />
-              <div className={`w-[16px] h-[16px] rounded-full border flex items-center justify-center ${authMethod === 'phone' ? 'border-[#0f2a4a]' : 'border-gray-300'}`}>
-                {authMethod === 'phone' && <div className="w-[8px] h-[8px] rounded-full bg-[#0f2a4a]" />}
+              <div className={`w-[16px] h-[16px] rounded-full border flex items-center justify-center ${authMethod === 'phone' ? 'border-[#0c3d59]' : 'border-gray-300'}`}>
+                {authMethod === 'phone' && <div className="w-[8px] h-[8px] rounded-full bg-[#0c3d59]" />}
               </div>
-              <span className={`text-[14px] ${authMethod === 'phone' ? 'font-medium text-[#0f2a4a]' : 'text-[#6b7280]'}`}>Phone</span>
+              <span className={`text-[14px] ${authMethod === 'phone' ? 'font-medium text-[#0c3d59]' : 'text-[#6b7280]'}`}>Phone</span>
             </label>
             <label className="flex items-center gap-2 cursor-pointer select-none">
               <input
@@ -63,15 +78,15 @@ export default function LoginModal({ onClose }) {
                 }}
                 className="sr-only"
               />
-              <div className={`w-[16px] h-[16px] rounded-full border flex items-center justify-center ${authMethod === 'email' ? 'border-[#0f2a4a]' : 'border-gray-300'}`}>
-                {authMethod === 'email' && <div className="w-[8px] h-[8px] rounded-full bg-[#0f2a4a]" />}
+              <div className={`w-[16px] h-[16px] rounded-full border flex items-center justify-center ${authMethod === 'email' ? 'border-[#0c3d59]' : 'border-gray-300'}`}>
+                {authMethod === 'email' && <div className="w-[8px] h-[8px] rounded-full bg-[#0c3d59]" />}
               </div>
-              <span className={`text-[14px] ${authMethod === 'email' ? 'font-medium text-[#0f2a4a]' : 'text-[#6b7280]'}`}>Email</span>
+              <span className={`text-[14px] ${authMethod === 'email' ? 'font-medium text-[#0c3d59]' : 'text-[#6b7280]'}`}>Email</span>
             </label>
           </div>
 
           {authMethod === 'phone' ? (
-            <div className="flex items-center w-full h-[48px] border border-[#e5e7eb] rounded-[8px] mb-[24px] focus-within:border-[#0f2a4a] transition-colors">
+            <div className="flex items-center w-full h-[48px] border border-[#e5e7eb] rounded-[8px] mb-[24px] focus-within:border-[#0c3d59] transition-colors">
               <div className="flex items-center gap-2 px-[12px] h-full border-r border-[#e5e7eb] select-none bg-gray-50 rounded-l-[8px]">
                 <span className="flex flex-col justify-between w-5 h-3.5 border border-gray-100 overflow-hidden rounded-[1px] flex-shrink-0">
                   <span className="h-[33%] bg-[#ff9933]"></span>
@@ -91,7 +106,7 @@ export default function LoginModal({ onClose }) {
               />
             </div>
           ) : (
-            <div className="flex items-center w-full h-[48px] border border-[#e5e7eb] rounded-[8px] mb-[24px] focus-within:border-[#0f2a4a] transition-colors">
+            <div className="flex items-center w-full h-[48px] border border-[#e5e7eb] rounded-[8px] mb-[24px] focus-within:border-[#0c3d59] transition-colors">
               <input
                 type="email"
                 placeholder="Enter email address"
@@ -102,7 +117,7 @@ export default function LoginModal({ onClose }) {
             </div>
           )}
 
-          <button className="w-full h-[48px] bg-[#0f2a4a] hover:bg-[#0a1e35] text-white rounded-[8px] font-semibold text-[15px] transition-colors mb-[16px]">
+          <button className="w-full h-[48px] bg-[#0c3d59] hover:bg-[#082c40] text-white rounded-[8px] font-semibold text-[15px] transition-colors mb-[16px]">
             Send OTP
           </button>
 
