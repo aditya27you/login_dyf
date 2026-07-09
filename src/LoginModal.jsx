@@ -6,19 +6,19 @@ export default function LoginModal({ onClose }) {
 
   return (
     <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 font-['Poppins',sans-serif]">
-      <div className="w-[446px] h-[579px] bg-white rounded-[16px] shadow-[0_10px_40px_rgba(0,0,0,0.15)] pt-[40px] pb-[40px] px-[32px] relative flex flex-col justify-between box-border">
+      <div className="w-[446px] h-[579px] bg-white rounded-[16px] shadow-[0_10px_40px_rgba(0,0,0,0.15)] p-[32px] relative flex flex-col box-border">
         <button
           onClick={onClose}
-          className="absolute top-[24px] right-[24px] text-gray-500 hover:text-gray-800 transition-colors duration-200"
+          className="absolute top-[32px] right-[32px] text-gray-500 hover:text-gray-800 transition-colors duration-200"
           aria-label="Close"
         >
-          <svg width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="w-6 h-6" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.9583 0.625L0.625 13.9583M0.625 0.625L13.9583 13.9583" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </button>
 
         <div className="flex flex-col">
-          <div className="flex items-center justify-center mb-[20px] select-none">
+          <div className="flex items-center justify-center mb-[8px] select-none">
             <svg className="w-10 h-10 mr-2 flex-shrink-0" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M17 13.5C10 16.5 8 25 12.5 31.5C15 35 20 35.5 23 33C17.5 34 13.5 31 12.5 25.5C11.5 19.5 14 14.5 17 13.5Z"
@@ -50,7 +50,7 @@ export default function LoginModal({ onClose }) {
             Sign in to get started
           </h2>
 
-          <div className="flex justify-center items-center gap-[24px] mb-[20px]">
+          <div className="flex justify-center items-center gap-[24px] mb-[16px]">
             <label className="flex items-center gap-2 cursor-pointer select-none">
               <input
                 type="radio"
@@ -94,8 +94,8 @@ export default function LoginModal({ onClose }) {
           </div>
 
           {authMethod === 'phone' ? (
-            <div className="flex items-center w-full h-[48px] border border-[#e5e7eb] rounded-[8px] mb-[24px] focus-within:border-[#0D3B59] transition-colors">
-              <div className="flex items-center gap-2 px-[12px] h-full border-r border-[#e5e7eb] select-none bg-gray-50 rounded-l-[8px]">
+            <div className="flex items-center gap-[12px] p-[12px_16px] w-full border border-[#CFD8DE] rounded-[8px] bg-white focus-within:border-[#0D3B59] transition-colors mb-[16px]">
+              <div className="flex items-center gap-2 select-none">
                 <span className="flex flex-col justify-between w-5 h-3.5 border border-gray-100 overflow-hidden rounded-[1px] flex-shrink-0">
                   <span className="h-[33%] bg-[#ff9933]"></span>
                   <span className="h-[33%] bg-white flex items-center justify-center">
@@ -105,37 +105,38 @@ export default function LoginModal({ onClose }) {
                 </span>
                 <span className="text-[14px] font-medium text-gray-700">+91</span>
               </div>
+              <div className="w-[1px] h-[20px] bg-[#CFD8DE] flex-shrink-0"></div>
               <input
                 type="tel"
                 placeholder="Enter phone number"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="flex-1 h-full pl-[12px] pr-3 text-[14px] outline-none rounded-r-[8px] text-gray-800 placeholder-gray-400 font-sans"
+                className="flex-1 text-[14px] outline-none text-gray-800 placeholder-gray-400 bg-transparent font-sans"
               />
             </div>
           ) : (
-            <div className="flex items-center w-full h-[48px] border border-[#e5e7eb] rounded-[8px] mb-[24px] focus-within:border-[#0D3B59] transition-colors">
+            <div className="flex items-center p-[12px_16px] w-full border border-[#CFD8DE] rounded-[8px] bg-white focus-within:border-[#0D3B59] transition-colors mb-[16px]">
               <input
                 type="email"
                 placeholder="Enter email address"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="flex-1 h-full px-[16px] text-[14px] outline-none rounded-[8px] text-gray-800 placeholder-gray-400 font-sans"
+                className="flex-1 text-[14px] outline-none text-gray-800 placeholder-gray-400 bg-transparent font-sans"
               />
             </div>
           )}
 
-          <button className="w-full h-[48px] bg-[#0D3B59] hover:bg-[#092c42] text-white rounded-[8px] font-semibold text-[15px] transition-colors mb-[16px]">
+          <button className="flex w-[150px] h-[44px] min-h-[44px] p-[12px_16px] justify-center items-center gap-[8px] bg-[#0D3B59] hover:bg-[#092c42] text-white rounded-[8px] font-semibold text-[15px] transition-colors mx-auto mb-[20px]">
             Send OTP
           </button>
 
-          <div className="text-center text-[14px] mb-[28px] select-none">
+          <div className="text-center text-[14px] select-none">
             <span className="text-[#6b7280]">New to Degreefyd...? </span>
             <span className="text-[#2563eb] font-semibold hover:underline cursor-pointer">Sign up</span>
           </div>
         </div>
 
-        <div className="flex justify-between items-start border-t border-gray-100 pt-6">
+        <div className="mt-auto flex justify-between items-start border-t border-gray-100 pt-6">
           <div className="flex flex-col items-center text-center max-w-[100px] flex-1">
             <div className="w-[36px] h-[36px] rounded-full bg-[#fff2e8] flex items-center justify-center mb-2">
               <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
